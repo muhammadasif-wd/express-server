@@ -23,7 +23,7 @@ app.get('/', (req: Request, res: Response) => {
 })
 app.use(globalErrorHandler)
 
-//? handle not found route
+//? handle not found route (error 404)
 app.use((req: Request, res: Response, next: NextFunction) => {
   res.status(httpStatus.NOT_FOUND).json({
     success: false,
